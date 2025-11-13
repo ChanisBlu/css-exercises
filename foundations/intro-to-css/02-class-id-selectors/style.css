@@ -1,1 +1,24 @@
 /* Add CSS Styling */
+.odd {
+    background-color: rgb(255, 200, 200);/* rosa claro */
+    color: black;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+
+/* second element */
+#second {
+    color: blue;
+    font-size: 36px;
+}
+
+/* third element gets extra font size */
+.cooler {
+    font-size: 24px;
+}
+
+/*fourth element */
+#fourth {
+    background-color: rgb(180, 250, 180); /*verde claro */
+    font-size: 24px;
+    font-weight: bold;
+}
