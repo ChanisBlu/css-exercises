@@ -1,6 +1,46 @@
+body {
+  margin: 0;              /* quita el margen blanco por defecto del body */
+}
+
+
+
 .header  {
   font-family: monospace;
   background: papayawhip;
+
+
+
+
+  display: flex;
+/* 
+    Hacemos que el header sea un contenedor flex:
+    - los hijos (ul izquierda, logo, ul derecha) se ponen en fila
+    - nos permite separarlos y centrarlos fácilmente
+  */
+
+  justify-content: space-between;
+
+    /*
+    Separa los hijos a los extremos:
+    - ul izquierda pegado a la izquierda
+    - logo en medio
+    - ul derecha pegado a la derecha
+  */
+
+  align-items: center;
+
+  /* 
+    Centra VERTICALMENTE todo dentro del header.
+    Es decir, logo y links quedan alineados al centro en altura.
+  */
+
+
+  padding: 8px 32px;
+
+   /*
+    Espacio interno entre el contenido y el borde del header
+    (para que nada quede pegado a los bordes).
+  */
 }
 
 .logo {
@@ -13,7 +53,22 @@
 
 ul {
   /* this removes the dots on the list items*/
-  list-style-type: none;
+  list-style-type: none; /* Quitamos las viñetas (bolitas) de la lista */
+  
+  margin: 0;
+  padding: 0;
+   /*
+    Quitamos los márgenes y el padding POR DEFECTO de las <ul>,
+    así controlamos nosotros el espacio manualmente.
+  */
+
+  display: flex; /*
+    Ponemos los <li> en fila (por defecto estarían uno debajo de otro).
+  */
+  gap: 8px;/*
+    Espacio horizontal entre cada link de la lista.
+    Mucho más limpio que andar dando margin a cada <li>.
+  */
 }
 
 a {
