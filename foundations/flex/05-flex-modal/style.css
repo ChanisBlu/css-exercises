@@ -20,7 +20,30 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+
+  /* 👉 NUEVO: hacemos que icono y contenido estén en fila */
+  display: flex;
+  padding: 24px;
+  gap: 16px; /* misma separación entre borde–icono e icono–texto */
 }
+
+/* 👉 Título más grande y en negritas */
+.header {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.modal-body {
+  padding: 0 16px 16px 16px;
+}
+
+/* 👉 Fila de botones, alineados a la izquierda */
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
 
 .icon {
   color: royalblue;
@@ -33,6 +56,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* 👉 Importante: que el icono NO se achique al reducir ancho */
+  flex-shrink: 0;
+}
+
+
+/* 👉 Columna que contiene título, texto y botones */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start; /* todo alineado a la IZQUIERDA */
 }
 
 .close-button {
